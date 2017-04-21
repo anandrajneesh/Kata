@@ -17,13 +17,13 @@ public class QuickSort3Way<T extends Comparable<T>> {
 
     public static <T extends Comparable<T>> void testQuickSort(T[] data){
         String sortedString = Arrays.stream(Arrays.copyOf(data,data.length))
-                .sorted().map(x->x.toString()).collect(Collectors.joining());
+                .sorted().map(Object::toString).collect(Collectors.joining());
 
         QuickSort3Way<T> qs = new QuickSort3Way<>();
         qs.sort(data);
 
         String resultString = Arrays.stream(Arrays.copyOf(data,data.length))
-                .map(x->x.toString()).collect(Collectors.joining());
+                .map(Object::toString).collect(Collectors.joining());
 
         if(sortedString.equals(resultString)){
             System.out.println("Sort Passed");

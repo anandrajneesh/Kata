@@ -17,9 +17,9 @@ public class Problem15 {
              *     N               N!*E!
              */
 
-            long gridSize = 20;
+            long gridSize = 4;
             BigInteger fac = factorial(gridSize);
-            System.out.println(factorial(40).divide(fac.multiply(fac)));
+            System.out.println(factorial(8).divide(fac.multiply(fac)));
 
         }catch (Exception e){
             e.printStackTrace();
